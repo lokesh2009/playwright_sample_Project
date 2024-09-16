@@ -1,5 +1,6 @@
 // Include playwrite module
-const {test,expect}= require('@playwright/test')
+const {test,expect}= require('@playwright/test');
+const { basename } = require('path');
 
 // Write a testawait page.goto('https://www.google.com/');
 
@@ -9,6 +10,8 @@ test('Verify google search',async({page}) =>{
     // go to the URl
 
     await page.goto("https://google.com");
+
+    //await page.$('#DummyLoc').nth(2).click();
 
     // Seach icon
     await page.getByLabel('Search', { exact: true });
