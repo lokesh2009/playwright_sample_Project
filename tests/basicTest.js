@@ -8,5 +8,5 @@ test.only("Basic",async({page})=>{
     // Checks whole page
     const axeBuilder = await new AxeBuilder({page}).include['.back-link']
     analyze();
-    expect(axeBuilder.violations).toEqual[];
+    expect(axeBuilder.violations).equals[];
 })
