@@ -2,11 +2,16 @@
   "name": "playwrite-testautomation",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": { 
+  "test:api": "TEST_TYPE=api npx playwright test",
+  "test:ui": "TEST_TYPE=ui npx playwright test",
+  "test:mobile": "TEST_TYPE=mobile npx playwright test",
+  "test:local": "LOCAL=true ENVIRONMENT=Prod npx playwright test",
+  "test:sauce": "LOCAL=false SAUCE_SERVER_URL=https://ondemand.us-west-1.saucelabs.com:443/wd/hub ENVIRONMENT=Prod npx playwright test"},
   "keywords": [],
-  "author": "",
+  "author": "Lokesh Sharma",
   "license": "ISC",
-  "description": "",
+  "description": "This Automation suites run on API Mobile and Ui Automation",
   "devDependencies": {
     "@playwright/test": "^1.46.1",
     "@types/node": "^22.2.0"
@@ -14,4 +19,6 @@
   "dependencies": {
     "@axe-core/playwright": "^4.10.0"
   }
+  
+
 }
